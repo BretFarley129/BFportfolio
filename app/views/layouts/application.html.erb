@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag asset_path('fav.png'), :rel => 'icon', :type =>  'image/png' %>
+
+ 
+
+</head>
+<body>
+  <div id="top">
+    <div id="topleft">
+        <h1> Bret A Farley </h1>
+    </div>
+    <div id="topright">
+        <h2>
+            <a href="/"> About </a> | 
+            <a href="/projects"> Projects </a> | 
+            <a href="/contact"> Contact </a>
+        </h2>
+    </div>
+  </div>
+  <div id="spacer">
+  </div>
+  <div id = "lower">
+    <div id="middle">
+      <%= yield %>
+    </div>
+    <div id="bottom">
+    <a href="BretFarleyResume.pdf" download>Resume</a>
+    <span style="color white"> | </span>
+    <div class="logo">
+      <i class="devicon-github-plain" style="color:white;"></i>
+    </div>
+      <a href="https://github.com/BretFarley129"> BretFarley129</a>
+      <span style="color white"> | </span>
+      <div class='logo'>
+        <%= image_tag("pics/linkedin.png", width: '20px') %> 
+      </div>
+      <a href="https://www.linkedin.com/in/bret-farley-41352014b/"> Bret Farley</a>
+
+    </div>
+  </div>
+</body>
+</html>
+ 

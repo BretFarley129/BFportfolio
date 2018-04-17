@@ -1,0 +1,24 @@
+<div id="contact">
+    <div id="contactform">
+        <form action="/sendform" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <div class='buff'>
+                <h2> Full Name </h2>
+                <input type="text" name="name">
+            </div>
+            <div class='buff'>
+                <h2> Email </h2>
+                <input type="text" name="email">
+            </div>
+            <h2> Phone # </h2>
+            <input type="text" name="phone">
+            <h2> Message </h2>
+            <textarea rows="6" style="width: 80%;"></textarea>
+            <br><br>
+            <div class="right">
+                <button class="button">Send</button>
+            </div>
+
+        </form>
+    </div>
+</div>

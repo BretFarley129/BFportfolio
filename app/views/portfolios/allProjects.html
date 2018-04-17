@@ -1,0 +1,70 @@
+<script>
+    function snakeover(x){
+        console.log('enter')
+        x.innerHTML = `
+        <div class="overlay2">
+            <br>
+            <h4 style="margin: 0px;"><a href="/projects/snake" > Snake </a></h4>
+            <div style="margin: 10px;">
+                <span style="color:white">
+                    A simple snake game that I designed in an hour as a demo on interactive
+                    web design. 
+                </span>
+            </div>
+        </div>
+        `;
+    }
+    function snakeout(y){
+        console.log('exit')
+        y.innerHTML = `
+        <div class="overlay"  onmouseenter="snakeover(this)">
+        </div>
+        `;
+    }
+    function bikeover(x){
+        console.log('enter')
+        x.innerHTML = `
+        <div class="overlay2">
+            <br>
+            <h4 style="margin: 0px;"><a href="/projects/bikes" > Bicycle Marketplace </a></h4>
+            <div style="margin: 10px;">
+                <span style="color:white">
+                    A "Craigslist-lite" application that allows users to list bikes and contact other
+                    users that are selling bikes
+                </span>
+            </div>
+        </div>
+        `;
+    }
+    function bikeout(y){
+        console.log('exit')
+        y.innerHTML = `
+        <div class="overlay"  onmouseenter="bikeover(this)">
+        </div>
+        `;
+    }
+</script>
+<div id="projects">
+    
+    
+    <br>
+    <br>
+    <div class="container">
+        <div class="proj_header">
+            <h3> <a href="/projects/snake"> Snake </a> </h3>
+        </div>
+        <div class="project" onmouseleave="snakeout(this)"  style="height: 325px; background-image: url(<%= asset_path 'snake.PNG' %>)" >
+            <div class="overlay" onmouseenter="snakeover(this)">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="proj_header">
+            <h3> <a href="/projects/bikes"> Bicycle Marketplace </a> </h3>
+        </div>
+        <div class="project" onmouseleave="bikeout(this)"  style="height: 226px; background-image: url(<%= asset_path 'bikes.PNG' %>)" >
+            <div class="overlay" onmouseenter="bikeover(this)">
+            </div>
+        </div>
+    </div>
+</div>
