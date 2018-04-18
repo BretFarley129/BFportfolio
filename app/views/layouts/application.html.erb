@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag asset_path('fav.png'), :rel => 'icon', :type =>  'image/png' %>
+  <%= favicon_link_tag asset_path('ME.png'), :rel => 'icon', :type =>  'image/png' %>
 
  
 
@@ -14,7 +14,15 @@
 <body>
   <div id="top">
     <div id="topleft">
-        <h1> Bret A Farley </h1>
+    <div style="display: inline-block">
+      <%= image_tag("ME.png", width: '20px') %> 
+    </div>
+    <div style="display: inline-block">
+      <h1> <a href="/">Bret A Farley </a></h1>
+    </div>
+    <div style="display: inline-block">
+      <%= image_tag("ME.png", width: '20px') %> 
+    </div>
     </div>
     <div id="topright">
         <h2>
